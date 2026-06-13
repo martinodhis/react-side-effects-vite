@@ -13,19 +13,27 @@ In another tab, run `npm run test` to run the test suite.
 
 Before you start building out the application, examine the current code and component hierarchy. This will tell you how components can pass data to each other as well as where that information should be stored.
 
-## Deliverables
+# React Side Effects: Programming Jokes
 
-- **When our application loads**, make a `GET` request to `https://v2.jokeapi.dev/joke/Programming?type=single` to fetch a joke. Given your component tree, think about which component should be responsible for managing the joke data. Once the data is fetched, store it in state and render the joke on the page.
+This project demonstrates how to handle side effects in a React application using the `useEffect` and `useState` hooks. It fetches and displays a random programming joke from an external API when the app loads, and allows the user to fetch a new joke by clicking a button.
 
-- **When the `New Joke` button is clicked**, make another `GET` request to `https://v2.jokeapi.dev/joke/Programming?type=single` to fetch a new joke. Update the state accordingly so that the new joke replaces the old one in the UI.
+## 🌟 Features
 
-- **While waiting for the fetch request to resolve**, display a loading message to inform the user that a joke is being fetched.
+- **Initial Data Fetching**: Automatically fetches a programming joke when the component mounts using `useEffect`.
+- **Interactive UI**: Users can click a "Get a New Joke" button to fetch and display a new joke.
+- **Loading States**: Displays a "Loading..." message while waiting for the API response.
+- **Error Handling**: Gracefully handles and displays errors if the API request fails.
 
-- **If the API request fails**, handle the error gracefully by displaying a message instead of breaking the UI.
+## 🛠️ Prerequisites
 
-## Best Practices
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- npm or yarn
+- A code editor like VSCode
+- React DevTools (recommended for debugging)
 
-- Use the `useEffect` hook to make API calls at the appropriate lifecycle phase.
-- Manage component state using the `useState` hook.
-- Keep components modular and reusable.
-- Remove unnecessary console logs and commented-out code before submission.
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/learn-co-curriculum/react-side-effects-vite.git
+cd react-side-effects-vite
